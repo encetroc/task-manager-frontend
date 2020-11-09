@@ -8,7 +8,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { WebRequestInterceptorService } from './web-request-interceptor.service'
+import { WebRequestInterceptorService } from './web-request-interceptor.service';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WebRequestInterceptorService } from './web-request-interceptor.service'
     TaskViewComponent,
     NewListComponent,
     NewTaskComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SignupPageComponent
   ],
   imports: [
     BrowserModule,

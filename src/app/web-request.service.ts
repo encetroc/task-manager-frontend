@@ -28,4 +28,8 @@ export class WebRequestService {
   login(email: string, password: string) {
     return this.http.post(`${this.URL}/users/login`, {email, password}, {observe: 'response'})
   }
+
+  signup(email: string, password: string) {
+    return this.http.post(`${this.URL}/users`, {email, password}, {observe: 'response'})
+  }
 }
