@@ -21,6 +21,15 @@
     flex-direction: column;
     flex-grow: 1;
     padding: 42px;
+
+    .title {
+        margin: 0;
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .list-menu {
@@ -49,6 +58,9 @@
 }
 
 .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #fff;
     padding: 15px 20px;
     margin-top: 10px;
@@ -62,12 +74,28 @@
     
         &:hover {
             box-shadow: 0 0 0 5px #eee;
+
+            .task-buttons {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     }
 
-    &.completed {
+    &.completed p {
         text-decoration: line-through;
         opacity: 0.8;
+    }
+
+    .task-buttons {
+        display: flex;
+        opacity: 0;
+        transform: scale(0.5);
+        transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        .button + .button {
+            margin-left: 10px;
+        }
     }
 }
 
